@@ -1,6 +1,11 @@
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class projforca_bot extends TelegramLongPollingBot {
 
 
@@ -13,6 +18,46 @@ public class projforca_bot extends TelegramLongPollingBot {
     }
 
     public String getBotToken() {
-        return "978041427:AAFlTM06U6zD4_-9Ske_LuFa8G9VjaNRCS0";
+        return getChave();
+    }
+
+    private String getChave() {
+        // The name of the file to open.
+        String fileName = "/home/ladp17/Documents/botTelegram/projfarca_bot/.chave.txt";
+
+        // This will reference one line at a time
+        String line = null;
+
+        try {
+            // FileReader reads text files in the default encoding.
+            FileReader fileReader =
+                    new FileReader(fileName);
+
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader bufferedReader =
+                    new BufferedReader(fileReader);
+
+            while((line = bufferedReader.readLine()) != null) {
+
+            }
+
+            // Always close files.
+            bufferedReader.close();
+        }
+        catch(FileNotFoundException ex) {
+            System.out.println(
+                    "Unable to open file '" +
+                            fileName + "'");
+        }
+        catch(IOException ex) {
+            System.out.println(
+                    "Error reading file '"
+                            + fileName + "'");
+            // Or we could just do this:
+            // ex.printStackTrace();
+        }
+
+
+        return line;
     }
 }
