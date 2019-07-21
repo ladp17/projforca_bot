@@ -9,7 +9,9 @@ import java.io.IOException;
 public class projforca_bot extends TelegramLongPollingBot {
 
 
+//    n entendi pq q n ta funcionando essa parte aqui em baixo.
     public void onUpdateReceived(Update update) {
+        System.out.println("teste");
 
     }
 
@@ -17,13 +19,11 @@ public class projforca_bot extends TelegramLongPollingBot {
         return "projforca_bot";
     }
 
-    public String getBotToken() {
-        return getChave();
-    }
+    public String getBotToken() { return getChave(); }
 
     private String getChave() {
         // The name of the file to open.
-        String fileName = "/home/ladp17/Documents/botTelegram/projfarca_bot/.chave.txt";
+        String fileName = "/home/ladp17/Documents/botTelegram/projforca_bot/.chave.txt";
 
         // This will reference one line at a time
         String line = null;
