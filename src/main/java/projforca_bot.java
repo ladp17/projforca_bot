@@ -8,10 +8,14 @@ import java.io.IOException;
 
 public class projforca_bot extends TelegramLongPollingBot {
 
+    Forca forca = new Forca();
+
 //    n entendi pq q n ta funcionando essa parte aqui em baixo.
     public void onUpdateReceived(Update update) {
 
         System.out.println("teste");
+
+        forca.start();
 
     }
 

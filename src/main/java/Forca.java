@@ -5,16 +5,67 @@ public class Forca {
 
 
     public void printForca(int i) {
-        int tamforca = 5; //tamanho de vforca
+        int tamforca = 8; //tamanho de vforca
         List<String> vforca= new ArrayList<String>();
 
         if (i < tamforca) {
 
-            vforca.add("");
-            vforca.add("");
-            vforca.add("");
-            vforca.add("");
-            vforca.add("");
+            vforca.add("|——-    \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   ô   \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   ô   \n" +
+                       "|   |   \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   |   \n" +
+                       "|   ô   \n" +
+                       "|  /|   \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   ô   \n" +
+                       "|  /|\\ \n" +
+                       "|       \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   ô   \n" +
+                       "|  /|\\ \n" +
+                       "|  /    \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   ô   \n" +
+                       "|  /|\\ \n" +
+                       "|  / \\ \n" +
+                       "|       \n" +
+                       "|__     ");
+
+            vforca.add("|——-    \n" +
+                       "|   |   \n" +
+                       "|   ô   \n" +
+                       "|  /|\\ \n" +
+                       "|  / \\ \n" +
+                       "|__     ");
+
             System.out.println(vforca.get(i));
 
         }
@@ -34,12 +85,13 @@ public class Forca {
         //inicia coisas relevantes pra forca
         palavra.setPalavra();
         palavra.criaHidden();
+        printForca(0);
         palavra.printHidden();
 
 
         //jogo
         boolean errou;
-        int limite = 5;
+        int limite = 7;
         int erro = 0;
 
 
