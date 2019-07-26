@@ -61,10 +61,10 @@ public class Forca {
 
             vforca.add("|——-    \n" +
                        "|   |   \n" +
-                       "|   ô   \n" +
+                       "|   x   \n" +
                        "|  /|\\ \n" +
                        "|  / \\ \n" +
-                       "|__     ");
+                       "|_<     ");
 
             System.out.println(vforca.get(i));
 
