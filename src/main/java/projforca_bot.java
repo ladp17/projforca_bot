@@ -8,18 +8,22 @@ import java.io.IOException;
 
 public class projforca_bot extends TelegramLongPollingBot {
 
-
 //    n entendi pq q n ta funcionando essa parte aqui em baixo.
     public void onUpdateReceived(Update update) {
+
         System.out.println("teste");
 
     }
 
     public String getBotUsername() {
+
         return "projforca_bot";
     }
 
-    public String getBotToken() { return getChave(); }
+    public String getBotToken() {
+
+        return getChave();
+    }
 
     private String getChave() {
         // The name of the file to open.
@@ -27,6 +31,7 @@ public class projforca_bot extends TelegramLongPollingBot {
 
         // This will reference one line at a time
         String line = null;
+        String key = null;
 
         try {
             // FileReader reads text files in the default encoding.
@@ -38,6 +43,8 @@ public class projforca_bot extends TelegramLongPollingBot {
                     new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) {
+
+                key = line;
 
             }
 
@@ -58,6 +65,6 @@ public class projforca_bot extends TelegramLongPollingBot {
         }
 
 
-        return line;
+        return key;
     }
 }
